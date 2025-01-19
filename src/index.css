@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.play-ground {
+  background-image: radial-gradient(#eee 1px, transparent 1px);
+  background-size: 20px 20px;
+}
