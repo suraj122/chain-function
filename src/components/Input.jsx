@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
-const Input = () => {
-  const [initialValue, setInitialValue] = useState(2);
+const Input = ({ initialValue, setInitialValue }) => {
   return (
     <div className="relative">
       <label
