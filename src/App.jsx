@@ -49,7 +49,7 @@ const App = () => {
   };
 
   return (
-    <main className="flex justify-center items-center py-16 play-ground flex-col gap-28">
+    <main className="flex justify-center items-center py-44 play-ground flex-col gap-28">
       <div className="flex items-end gap-2">
         <Input initialValue={initialValue} setInitialValue={setInitialValue} />
         <div className="flex gap-24">

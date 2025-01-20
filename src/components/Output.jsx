@@ -10,11 +10,11 @@ const Output = ({ output }) => {
       >
         Final Output Y
       </label>
-      <div className="border px-5 pl-16 py-3 rounded-2xl w-[115px] border-green-600">
-        {output ? output : "calculating"}
+      <div className="border px-5 pl-16 py-3 rounded-2xl w-[115px] border-green-600 text-lg font-bold text-black">
+        {output ? output : "..."}
       </div>
       <div className="flex items-center gap-3 absolute left-3 border-r top-[2px] bottom-[2px] pr-3">
-        <div className="bg-blue-400 w-1 h-1 rounded-full outline outline-2 outline-gray-300 border-2 border-white p-2"></div>
+        <div className="bg-royal-blue w-4 h-4 rounded-full outline outline-[2px] outline-gray-300 border-[3px] border-white"></div>
       </div>
     </div>
   );
