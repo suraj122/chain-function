@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
-const Function = ({ name, equation, setEquation }) => {
+const Function = ({ name, nextFunc, equation, setEquation }) => {
+  const [selectedValue, setSelectedValue] = useState(nextFunc);
+
+  const handleChange = (e) => {
+    setSelectedValue((prev) => prev + e.target.value);
+  };
+
   return (
     <div className="bg-white border shadow-md px-5 py-4 rounded-2xl w-[235px]">
-      <h2 className="text-sm font-semibold">{name}</h2>
+      <h2 className="tet-sm font-semibold">{name}</h2>
       <div>
         <label className="font-medium text-xs" htmlFor="">
           Equation
@@ -16,6 +22,26 @@ const Function = ({ name, equation, setEquation }) => {
           value={equation}
           onChange={(e) => setEquation(e.target.value)}
         />
+      </div>
+      <div className="mt-4">
+        <label className="font-medium text-xs" htmlFor="">
+          Next Function
+        </label>
+        <br />
+        <select
+          className="block w-full border rounded-lg px-3 py-2 mt-1 disabled:bg-gray-200"
+          name=""
+          id=""
+          disabled
+          onChange={handleChange}
+          value={selectedValue}
+        >
+          <option value="function2">Function 2</option>
+          <option value="function3">Function 3</option>
+          <option value="function4">Function 4</option>
+          <option value="function5">Function 5</option>
+          <option value="-">-</option>
+        </select>
       </div>
       <div className="mt-12 flex justify-between items-center">
         <div className="flex items-center gap-3">

@@ -16,8 +16,6 @@ const App = () => {
 
   // Recursive function to calculate outputs based on chaining
   const calculateOutput = (funcName, input) => {
-    console.log(input);
-
     const currentFunc = functions[funcName];
     if (!currentFunc || currentFunc.next === "-")
       return evaluateExpression(
