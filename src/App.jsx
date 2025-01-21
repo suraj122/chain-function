@@ -62,18 +62,21 @@ const App = () => {
               equation={functions.function1.equation}
               setEquation={(eq) => updateEquation("function1", eq)}
               connection={"connection2"}
+              nextFunc={"function2"}
             />
             <Function
               name="Function 2"
               equation={functions.function2.equation}
               setEquation={(eq) => updateEquation("function2", eq)}
               connection={"connection3"}
+              nextFunc={"function4"}
             />
             <Function
               name="Function 3"
               equation={functions.function3.equation}
               setEquation={(eq) => updateEquation("function3", eq)}
               connection={"connection4"}
+              nextFunc={"-"}
             />
           </div>
           <Output output={finalResult} />
@@ -84,11 +87,13 @@ const App = () => {
             equation={functions.function4.equation}
             setEquation={(eq) => updateEquation("function4", eq)}
             connection={"connection2"}
+            nextFunc={"function5"}
           />
           <Function
             name="Function 5"
             equation={functions.function5.equation}
             setEquation={(eq) => updateEquation("function5", eq)}
+            nextFunc={"function3"}
           />
         </div>
       </main>
