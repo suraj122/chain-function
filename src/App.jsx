@@ -49,41 +49,50 @@ const App = () => {
   };
 
   return (
-    <main className="flex justify-center items-center py-44 play-ground flex-col gap-28">
-      <div className="flex items-end gap-2">
-        <Input initialValue={initialValue} setInitialValue={setInitialValue} />
-        <div className="flex gap-24">
+    <div className="relative">
+      <main className="flex justify-center items-center py-44 play-ground flex-col gap-24">
+        <div className="flex items-end gap-2">
+          <Input
+            initialValue={initialValue}
+            setInitialValue={setInitialValue}
+          />
+          <div className="flex gap-32">
+            <Function
+              name="Function 1"
+              equation={functions.function1.equation}
+              setEquation={(eq) => updateEquation("function1", eq)}
+              connection={"connection2"}
+            />
+            <Function
+              name="Function 2"
+              equation={functions.function2.equation}
+              setEquation={(eq) => updateEquation("function2", eq)}
+              connection={"connection3"}
+            />
+            <Function
+              name="Function 3"
+              equation={functions.function3.equation}
+              setEquation={(eq) => updateEquation("function3", eq)}
+              connection={"connection4"}
+            />
+          </div>
+          <Output output={finalResult} />
+        </div>
+        <div className="flex gap-32">
           <Function
-            name="Function 1"
-            equation={functions.function1.equation}
-            setEquation={(eq) => updateEquation("function1", eq)}
+            name="Function 4"
+            equation={functions.function4.equation}
+            setEquation={(eq) => updateEquation("function4", eq)}
+            connection={"connection2"}
           />
           <Function
-            name="Function 2"
-            equation={functions.function2.equation}
-            setEquation={(eq) => updateEquation("function2", eq)}
-          />
-          <Function
-            name="Function 3"
-            equation={functions.function3.equation}
-            setEquation={(eq) => updateEquation("function3", eq)}
+            name="Function 5"
+            equation={functions.function5.equation}
+            setEquation={(eq) => updateEquation("function5", eq)}
           />
         </div>
-        <Output output={finalResult} />
-      </div>
-      <div className="flex gap-32">
-        <Function
-          name="Function 4"
-          equation={functions.function4.equation}
-          setEquation={(eq) => updateEquation("function4", eq)}
-        />
-        <Function
-          name="Function 5"
-          equation={functions.function5.equation}
-          setEquation={(eq) => updateEquation("function5", eq)}
-        />
-      </div>
-    </main>
+      </main>
+    </div>
   );
 };
 

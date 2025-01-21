@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 const Input = ({ initialValue, setInitialValue }) => {
   return (
-    <div className="relative">
+    <div className="relative input-connection">
       <label
         className="absolute left-0 right-0 text-center bg-royal-yellow px-3 rounded-2xl text-xs py-1 -top-8 text-white"
         htmlFor=""
@@ -10,7 +10,7 @@ const Input = ({ initialValue, setInitialValue }) => {
         Initial value of X
       </label>
       <input
-        className="border-2 px-5 py-3 rounded-2xl w-[115px] border-yellow-500 text-black font-bold text-lg"
+        className="border-2 px-5 h-[67px] py-3 rounded-2xl w-[115px] border-yellow-500 text-black font-bold text-lg"
         type="text"
         value={initialValue}
         onChange={(e) => setInitialValue(e.target.value)}
